@@ -1,7 +1,7 @@
 import React from 'react';
 
 function MovieCard(props){
-    let {movie} = props;
+    let {movie, addMovie} = props;
 
     return <div className='movie-card'>
         <div>
@@ -10,7 +10,7 @@ function MovieCard(props){
                 {movie.original_title}
             </h3>
         </div>
-        <button>Add to List</button>
+        <button onClick={() => addMovie(movie)}>Add to List</button>
 
     </div>
 }
